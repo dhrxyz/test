@@ -1,16 +1,11 @@
+on:
+  push:
+  
 jobs:
-  check:
-    name: Check files
-    outputs:
-      run_job: ${{ steps.check_files.outputs.run_job }}
+  test_schedule:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
       - name: list files
-        uses: actions/checkout@v2
         run: |
           ls -alrt
-          
+        

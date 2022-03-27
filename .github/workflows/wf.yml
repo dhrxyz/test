@@ -2,7 +2,7 @@ on:
   push:
   
 jobs:
-  test_schedule:
+  multi-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
